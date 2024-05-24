@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="abca48f8-d8fd-4d24-b059-62f5b3d84bea" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/08_ConnectingToMySQL.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../09_WorkingWithVOPattern/.idea/09_WorkingWithVOPattern.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../09_WorkingWithVOPattern/.idea/compiler.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../09_WorkingWithVOPattern/.idea/encodings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../09_WorkingWithVOPattern/.idea/jarRepositories.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../09_WorkingWithVOPattern/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../09_WorkingWithVOPattern/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../09_WorkingWithVOPattern/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../09_WorkingWithVOPattern/rest-with-spring-boot-and-java/src/main/java/org/example/restwithspringbootandjavaerudio/data/vo/v1/Person.java" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
+  "lastFilter": {
+    "state": "OPEN",
+    "assignee": "rdGxd"
+  }
+}]]></component>
+  <component name="GithubPullRequestsUISettings"><![CDATA[{
+  "selectedUrlAndAccountId": {
+    "url": "https://github.com/rdGxd/rest-with-spring-boot-and-java-erudio.git",
+    "accountId": "bddba486-a015-4ed7-b76d-099a70629162"
+  }
+}]]></component>
+  <component name="ProjectColorInfo"><![CDATA[{
+  "associatedIndex": 7
+}]]></component>
+  <component name="ProjectId" id="2guxAmUzTa4fKQWiOE02hzksiet" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "git-widget-placeholder": "main",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "C:/Users/rodri/Documents/GitHub/rest-with-spring-boot-and-java-erudio/07_WorkingWithVerbs",
+    "nodejs_package_manager_path": "npm",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-jdk-9f38398b9061-39b83d9b5494-intellij.indexing.shared.core-IU-241.15989.150" />
+        <option value="bundled-js-predefined-1d06a55b98c1-91d5c284f522-JavaScript-IU-241.15989.150" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="abca48f8-d8fd-4d24-b059-62f5b3d84bea" name="Changes" comment="" />
+      <created>1716561123173</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1716561123173</updated>
+      <workItem from="1716561124376" duration="290000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+</project>
