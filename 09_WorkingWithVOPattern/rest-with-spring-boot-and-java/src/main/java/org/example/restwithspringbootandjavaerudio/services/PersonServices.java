@@ -1,13 +1,13 @@
 package org.example.restwithspringbootandjavaerudio.services;
 
-import org.example.restwithspringbootandjavaerudio.data.vo.v1.PersonDTO;
+import org.example.restwithspringbootandjavaerudio.data.vo.v1.PersonVO;
 import org.example.restwithspringbootandjavaerudio.exceptions.ResourceNotFoundException;
+import org.example.restwithspringbootandjavaerudio.mapper.ModelMapper;
 import org.example.restwithspringbootandjavaerudio.model.Person;
 import org.example.restwithspringbootandjavaerudio.repositories.PersonRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import java.util.ArrayList;
 import java.util.List;
 import java.util.logging.Logger;
 
@@ -18,42 +18,37 @@ public class PersonServices {
     @Autowired
     public PersonRepository repository;
 
-    public List<PersonDTO> findAll() {
+    public List<PersonVO> findAll() {
         logger.info("Finding all people");
-        List<PersonDTO> list = new ArrayList<>();
-        for (Person p : repository.findAll()) {
-            list.add(new PersonDTO(p.getId(), p.getFirstName(), p.getLastName(), p.getAddress(), p.getGender()));
-        }
-        return list;
+        return ModelMapper.parseListObjects(repository.findAll(), PersonVO.class);
     }
 
-    public PersonDTO findById(Long id) {
+    public PersonVO findById(Long id) {
         logger.info("Finding one person");
-        Person person = repository.findById(id).orElseThrow(() -> new ResourceNotFoundException("No records found for this ID: " + id));
-        return new PersonDTO(person.getId(), person.getFirstName(), person.getLastName(), person.getAddress(), person.getGender());
+
+        Person entity = repository.findById(id).orElseThrow(() -> new ResourceNotFoundException("No records found for this ID: " + id));
+        return ModelMapper.parseObject(entity, PersonVO.class);
     }
 
-    public PersonDTO create(PersonDTO person) {
+    public PersonVO create(PersonVO person) {
         logger.info("Creating one person");
-        Person entity = new Person();
-        entity.setFirstName(person.firstName());
-        entity.setLastName(person.lastName());
-        entity.setAddress(person.address());
-        entity.setGender(person.gender());
-        repository.save(entity);
-        return person;
+        Person entity = ModelMapper.parseObject(person, Person.class);
+        return ModelMapper.parseObject(repository.save(entity), PersonVO.class);
     }
 
-    public PersonDTO update(PersonDTO person) {
-        logger.info("Updating one person");
-        Person entity = repository.findById(person.id()).orElseThrow(() -> new ResourceNotFoundException("No records found for this ID!"));
+    public PersonVO update(PersonVO person) {
+        logger.info("Updating one person!");
 
-        entity.setFirstName(person.firstName());
-        entity.setLastName(person.lastName());
-        entity.setAddress(person.address());
-        entity.setGender(person.gender());
-        repository.save(entity);
-        return person;
+        Person entity = repository.findById(person.getId())
+                .orElseThrow(() -> new ResourceNotFoundException("No records found for this ID!"));
+
+        entity.setFirstName(person.getFirstName());
+        entity.setLastName(person.getLastName());
+        entity.setAddress(person.getAddress());
+        entity.setGender(person.getGender());
+
+        return ModelMapper.parseObject(repository.save(entity), PersonVO.class);
+
     }
 
     public void delete(Long id) {

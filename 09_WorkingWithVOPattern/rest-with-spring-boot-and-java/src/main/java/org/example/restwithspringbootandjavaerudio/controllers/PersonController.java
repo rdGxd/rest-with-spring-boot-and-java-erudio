@@ -1,6 +1,6 @@
 package org.example.restwithspringbootandjavaerudio.controllers;
 
-import org.example.restwithspringbootandjavaerudio.data.vo.v1.PersonDTO;
+import org.example.restwithspringbootandjavaerudio.data.vo.v1.PersonVO;
 import org.example.restwithspringbootandjavaerudio.services.PersonServices;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.MediaType;
@@ -21,22 +21,22 @@ public class PersonController {
 
 
     @GetMapping(produces = MediaType.APPLICATION_JSON_VALUE)
-    public List<PersonDTO> findAll() {
+    public List<PersonVO> findAll() {
         return service.findAll();
     }
 
     @GetMapping(value = "/{id}", produces = MediaType.APPLICATION_JSON_VALUE)
-    public PersonDTO findById(@PathVariable(value = "id") Long id) {
+    public PersonVO findById(@PathVariable(value = "id") Long id) {
         return service.findById(id);
     }
 
     @PostMapping(consumes = MediaType.APPLICATION_JSON_VALUE, produces = MediaType.APPLICATION_JSON_VALUE)
-    public PersonDTO create(@RequestBody PersonDTO person) {
+    public PersonVO create(@RequestBody PersonVO person) {
         return service.create(person);
     }
 
     @PutMapping(consumes = MediaType.APPLICATION_JSON_VALUE, produces = MediaType.APPLICATION_JSON_VALUE)
-    public PersonDTO update(@RequestBody PersonDTO person) {
+    public PersonVO update(@RequestBody PersonVO person) {
         return service.update(person);
     }
 
