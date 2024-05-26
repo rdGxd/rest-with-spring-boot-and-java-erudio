@@ -1,0 +1,17 @@
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/rest_with_spring_boot?useTimezone=true&serverTimezone=UTC
+    username: root
+    password: admin
+  jpa:
+    open-in-view: false
+    hibernate:
+      ddl-auto: none # None significa que o hibernate só vai ler e gravar no BD e o Update ele irá mudar a estrutura do banco
+    properties:
+      hibernate:
+        show_sql: false # Quando tiver debugando use como true
+springdoc:
+  pathsToMatch: /api/**/v1/**
+  swagger-ui:
+    use-root-path: true
