@@ -3,7 +3,10 @@ package org.example.restwithspringbootandjavaerudio.data.vo.v1;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
-import lombok.*;
+import lombok.AllArgsConstructor;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
 import org.springframework.hateoas.RepresentationModel;
 
 import java.io.Serializable;
@@ -14,14 +17,13 @@ import java.util.Date;
 @Setter
 @NoArgsConstructor
 @AllArgsConstructor
-@EqualsAndHashCode(of = "key", callSuper = false)
 @JsonPropertyOrder({"id", "author", "title", "price", "launch_date"})
 public class BookVO extends RepresentationModel<BookVO> implements Serializable {
 
     @JsonProperty("id")
     private Long key;
     private String author;
-    private Date launch_date = new Date();
+    private Date launch_date;
     private Double price;
     private String title;
 
