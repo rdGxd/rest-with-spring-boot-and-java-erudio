@@ -17,13 +17,13 @@ import java.util.Date;
 @Setter
 @NoArgsConstructor
 @AllArgsConstructor
-@JsonPropertyOrder({"id", "author", "title", "price", "launch_date"})
+@JsonPropertyOrder({"id", "author", "launchDate", "title", "price"})
 public class BookVO extends RepresentationModel<BookVO> implements Serializable {
 
     @JsonProperty("id")
     private Long key;
     private String author;
-    private Date launch_date;
+    private Date launchDate;
     private Double price;
     private String title;
 

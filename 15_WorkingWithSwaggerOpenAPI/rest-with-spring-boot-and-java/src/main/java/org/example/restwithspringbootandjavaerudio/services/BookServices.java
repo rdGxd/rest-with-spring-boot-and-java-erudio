@@ -56,7 +56,7 @@ public class BookServices {
         Book entity = repository.findById(book.getKey()).orElseThrow(() -> new ResourceNotFoundException("No records found for this ID: " + book.getKey()));
 
         entity.setAuthor(book.getAuthor());
-        entity.setLaunchDate(book.getLaunch_date());
+        entity.setLaunchDate(book.getLaunchDate());
         entity.setPrice(book.getPrice());
         entity.setTitle(book.getTitle());
         BookVO vo = MapperBook.parseObject(repository.save(entity), BookVO.class);

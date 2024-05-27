@@ -10,6 +10,7 @@ import org.junit.jupiter.api.Test;
 import java.util.List;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertNotNull;
 
 
 public class BookMapperConverterTest {
@@ -28,6 +29,7 @@ public class BookMapperConverterTest {
         assertEquals("Rodrigo", output.getAuthor());
         assertEquals("Title Test0", output.getTitle());
         assertEquals(0D, output.getPrice());
+        assertNotNull(output.getLaunchDate());
     }
 
     @Test
@@ -39,6 +41,7 @@ public class BookMapperConverterTest {
         assertEquals("Rodrigo", outputZero.getAuthor());
         assertEquals("Title Test0", outputZero.getTitle());
         assertEquals(0D, outputZero.getPrice());
+        assertNotNull(outputZero.getLaunchDate());
 
         BookVO outputSeven = outputList.get(7);
 
@@ -46,6 +49,8 @@ public class BookMapperConverterTest {
         assertEquals("Rafaela", outputSeven.getAuthor());
         assertEquals("Title Test7", outputSeven.getTitle());
         assertEquals(7D, outputSeven.getPrice());
+        assertNotNull(outputSeven.getLaunchDate());
+
 
         BookVO outputTwelve = outputList.get(12);
 
@@ -53,6 +58,7 @@ public class BookMapperConverterTest {
         assertEquals("Rodrigo", outputTwelve.getAuthor());
         assertEquals("Title Test12", outputTwelve.getTitle());
         assertEquals(12D, outputTwelve.getPrice());
+        assertNotNull(outputTwelve.getLaunchDate());
     }
 
     @Test
@@ -62,6 +68,7 @@ public class BookMapperConverterTest {
         assertEquals("Rodrigo", output.getAuthor());
         assertEquals("Title Test0", output.getTitle());
         assertEquals(0D, output.getPrice());
+        assertNotNull(output.getLaunchDate());
     }
 
     @Test
@@ -73,6 +80,7 @@ public class BookMapperConverterTest {
         assertEquals("Rodrigo", outputZero.getAuthor());
         assertEquals("Title Test0", outputZero.getTitle());
         assertEquals(0D, outputZero.getPrice());
+        assertNotNull(outputZero.getLaunchDate());
 
         Book outputSeven = outputList.get(7);
 
@@ -80,6 +88,7 @@ public class BookMapperConverterTest {
         assertEquals("Rafaela", outputSeven.getAuthor());
         assertEquals("Title Test7", outputSeven.getTitle());
         assertEquals(7D, outputSeven.getPrice());
+        assertNotNull(outputSeven.getLaunchDate());
 
         Book outputTwelve = outputList.get(12);
 
@@ -87,5 +96,6 @@ public class BookMapperConverterTest {
         assertEquals("Rodrigo", outputTwelve.getAuthor());
         assertEquals("Title Test12", outputTwelve.getTitle());
         assertEquals(12D, outputTwelve.getPrice());
+        assertNotNull(outputTwelve.getLaunchDate());
     }
 }

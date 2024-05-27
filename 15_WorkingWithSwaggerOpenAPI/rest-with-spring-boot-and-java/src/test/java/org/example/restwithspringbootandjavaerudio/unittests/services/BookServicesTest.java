@@ -56,6 +56,7 @@ class BookServicesTest {
         assertEquals("Rafaela", result.getAuthor());
         assertEquals("Title Test1", result.getTitle());
         assertEquals(1D, result.getPrice());
+        assertNotNull(result.getLaunchDate());
     }
 
     @Test
@@ -78,6 +79,7 @@ class BookServicesTest {
         assertEquals("Rafaela", result.getAuthor());
         assertEquals("Title Test1", result.getTitle());
         assertEquals(1D, result.getPrice());
+        assertNotNull(result.getLaunchDate());
     }
 
     @Test
@@ -114,6 +116,8 @@ class BookServicesTest {
         assertEquals("Rafaela", result.getAuthor());
         assertEquals("Title Test1", result.getTitle());
         assertEquals(1D, result.getPrice());
+        assertNotNull(result.getLaunchDate());
+
     }
 
 
@@ -158,6 +162,7 @@ class BookServicesTest {
         assertEquals("Rafaela", BookOne.getAuthor());
         assertEquals("Title Test1", BookOne.getTitle());
         assertEquals(1D, BookOne.getPrice());
+        assertNotNull(BookOne.getLaunchDate());
 
         BookVO BookFour = people.get(4);
 
@@ -169,6 +174,7 @@ class BookServicesTest {
         assertEquals("Rodrigo", BookFour.getAuthor());
         assertEquals("Title Test4", BookFour.getTitle());
         assertEquals(4D, BookFour.getPrice());
+        assertNotNull(BookFour.getLaunchDate());
 
         BookVO BookSeven = people.get(7);
 
@@ -180,6 +186,7 @@ class BookServicesTest {
         assertEquals("Rafaela", BookSeven.getAuthor());
         assertEquals("Title Test7", BookSeven.getTitle());
         assertEquals(7D, BookSeven.getPrice());
+        assertNotNull(BookSeven.getLaunchDate());
 
     }
 

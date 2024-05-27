@@ -4,6 +4,7 @@ import org.example.restwithspringbootandjavaerudio.data.vo.v1.BookVO;
 import org.example.restwithspringbootandjavaerudio.model.Book;
 
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.List;
 
 public class MockBook {
@@ -37,6 +38,7 @@ public class MockBook {
         Book.setAuthor(((number % 2) == 0) ? "Rodrigo" : "Rafaela");
         Book.setId(number.longValue());
         Book.setPrice(number.doubleValue());
+        Book.setLaunchDate(new Date());
         return Book;
     }
 
@@ -46,6 +48,7 @@ public class MockBook {
         Book.setAuthor(((number % 2) == 0) ? "Rodrigo" : "Rafaela");
         Book.setKey(number.longValue());
         Book.setPrice(number.doubleValue());
+        Book.setLaunchDate(new Date());
         return Book;
     }
 }
