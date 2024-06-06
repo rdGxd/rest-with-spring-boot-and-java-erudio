@@ -3,7 +3,7 @@ server:
 cors:
   originPatterns: http://localhost:8080,https://erudio.com.br,http://localhost:3000 # Configurando CORS de forma global
 file:
-  upload-dir: /JAVA_UPLOAD_DIR/UploadDir
+  upload-dir: /home/runner/work/rest-with-spring-boot-and-java-erudio/UploadDir
 security:
   jwt:
     token:
