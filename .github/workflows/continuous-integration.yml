@@ -29,6 +29,7 @@ jobs:
         java-version: '21'
         distribution: 'adopt'
         cache: maven
+  
     - name: Build Application JAR
       working-directory: ./22_DockerizingOurApp/rest-with-spring-boot-and-java
       run: mvn clean package
